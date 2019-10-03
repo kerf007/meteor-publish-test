@@ -37,13 +37,4 @@ Meteor.publish("posts", function() {
 
 Meteor.startup(() => {
   // code to run on server at startup
-  const post = Posts.findOne({});
-
-  Meteor.setTimeout(() => {
-    Posts.update(post._id, {
-      $set: {
-        title: "update title"
-      }
-    });
-  }, 5000);
 });
